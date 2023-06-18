@@ -26,7 +26,7 @@ public class DataSourceConfig {
     DataSource getDataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("org.postgresql.Driver");
-        dataSource.setUrl("jdbc:postgresql://localhost:5432/filesBase-securityfdfsdafasd");
+        dataSource.setUrl("jdbc:postgresql://localhost:5432/filesBase-security");
         dataSource.setUsername("postgres");
         dataSource.setPassword("admin");
         dataSource.setConnectionProperties(getHibernateProperties());
