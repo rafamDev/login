@@ -1,4 +1,4 @@
-package com.ms.login;
+package com.ms.login.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -31,7 +31,7 @@ public class SecurityConfig {
                        .build();
 
            } catch (Exception e) {
-               LOG.error("Security error in login access{}", e);
+               LOG.error("Security error in login access {}", e);
            }
        return null;
 	 }

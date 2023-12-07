@@ -1,0 +1,27 @@
+version: '3.1'
+
+services:
+  app:
+    image: 'login:latest'
+    build:
+      context: .
+    container_name: app
+    depends_on:
+      - db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/filesBase-security
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=admin
+      - SPRING_JAKARTA_JPA_HIBERNATE_DDL_AUTO=validate
+      - SPRING_JAKARTA_JPA_SHOW_SQL=true
+    ports:
+      - 8085:8085
+          
+  db:
+    image: 'postgres:13.1-alpine'
+    container_name: db
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=abc123.

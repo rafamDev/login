@@ -1,4 +1,4 @@
-package com.ms.login;
+package com.ms.login.bussines;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -15,8 +15,8 @@ public class UserAdapter implements UserDetails {
 
 	private User user;
 
-    public UserAdapter(User user) {
-		this.user = user;
+	public UserAdapter(Optional<User> user) {
+		this.user = user.orElse(new User());
 	}
 
 	@Override
