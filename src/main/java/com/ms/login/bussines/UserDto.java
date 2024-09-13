@@ -21,7 +21,7 @@ public class UserDto implements Serializable{
 	
 	private UserEntity userEntity;
 
-	public UserDto(UserEntity entity) {
+	public UserDto(final UserEntity entity) {
 		super();
 		this.user = new User();
 		this.user.setId(entity.getId());
@@ -30,7 +30,7 @@ public class UserDto implements Serializable{
 		this.user.setRole(entity.getRole());
 	}
 	
-	public UserDto(User user) {
+	public UserDto(final User user) {
 		super();
 		this.userEntity = new UserEntity();
 		this.userEntity.setId(user.getId());

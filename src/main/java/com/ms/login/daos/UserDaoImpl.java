@@ -32,7 +32,6 @@ public class UserDaoImpl implements UserDao{
 	@Override
 	public Optional<UserEntity> findUserByName(final String username) {
 		
-		
 		final CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
 		final CriteriaQuery<UserEntity> criteriaQuery = criteriaBuilder.createQuery(UserEntity.class);
 		final Root<UserEntity> root = criteriaQuery.from(UserEntity.class);

@@ -20,7 +20,7 @@ public class UserFacadeImpl implements UserFacade {
 
 	@Override
 	public Optional<User> findUserByName(final String username) {
-        return  userTransformer.getUserByName(username);
+        return userTransformer.getUserByName(username);
     }
 
 }

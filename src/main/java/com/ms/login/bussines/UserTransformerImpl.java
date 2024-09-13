@@ -14,7 +14,7 @@ public class UserTransformerImpl implements UserTransformer{
 	private UserDao userDao;
 	
 	@Override
-	public Optional<User> getUserByName(String username) {
+	public Optional<User> getUserByName(final String username) {
 		  return userDao.findUserByName(username)
 	                .map(entity -> new UserDto(entity).getUser());
 	}

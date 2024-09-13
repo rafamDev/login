@@ -15,7 +15,7 @@ public class UserAdapter implements UserDetails {
 
 	private User user;
 
-	public UserAdapter(Optional<User> user) {
+	public UserAdapter(final Optional<User> user) {
 		this.user = user.orElse(new User());
 	}
 

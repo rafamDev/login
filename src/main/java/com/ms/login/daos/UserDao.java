@@ -6,6 +6,6 @@ import com.ms.login.entities.UserEntity;
 
 public interface UserDao {
 
-	Optional<UserEntity> findUserByName(String username);
+	Optional<UserEntity> findUserByName(final String username);
 	
 }
